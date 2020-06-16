@@ -3,20 +3,20 @@
 ##################################################################################################################
 # Author	:	Erik Dubois
 # Website	:	https://www.erikdubois.be
-# Website	:	https://www.arcolinux.info
-# Website	:	https://www.arcolinux.com
-# Website	:	https://www.arcolinuxd.com
-# Website	:	https://www.arcolinuxb.com
-# Website	:	https://www.arcolinuxiso.com
-# Website	:	https://www.arcolinuxforum.com
+# Website	:	https://www.zencars.info
+# Website	:	https://www.zencars.com
+# Website	:	https://www.zencarsd.com
+# Website	:	https://www.zencarsb.com
+# Website	:	https://www.zencarsiso.com
+# Website	:	https://www.zencarsforum.com
 ##################################################################################################################
 #
 #   DO NOT JUST RUN THIS. EXAMINE AND JUDGE. RUN AT YOUR OWN RISK.
 #
 ##################################################################################################################
 # set our parameters
-buildFolder="$HOME/arcolinux-build"
-outFolder="$HOME/ArcoLinux-Out"
+buildFolder="$HOME/zencars-build"
+outFolder="$HOME/zencars-Out"
 
 echo
 echo "################################################################## "
@@ -25,8 +25,8 @@ echo "################################################################## "
 echo
 echo "Removing old files/folders from /etc/skel"
 rm -rf ../archiso/airootfs/etc/skel/.* 2> /dev/null
-echo "getting .bashrc from arcolinux-root"
-wget https://raw.githubusercontent.com/arcolinux/arcolinux-root/master/etc/skel/.bashrc-latest -O ../archiso/airootfs/etc/skel/.bashrc
+echo "getting .bashrc from zencars-root"
+wget https://raw.githubusercontent.com/zencars/zencars-root/master/.bashrc-latest -O ../archiso/airootfs/etc/skel/.bashrc
 echo ".bashrc copied to /etc/skel"
 
 echo
@@ -98,7 +98,7 @@ tput setaf 2;echo "Phase 4 : Moving files to build folder";tput sgr0
 echo "################################################################## "
 echo
 echo "Copying files and folder to build folder"
-sudo cp -r ../../arcolinux-iso-next $buildFolder
+sudo cp -r ../../zencars-iso $buildFolder
 
 sudo chmod 750 $buildFolder/archiso/airootfs/etc/sudoers.d
 sudo chmod 750 $buildFolder/archiso/airootfs/etc/polkit-1/rules.d
@@ -133,7 +133,7 @@ tput setaf 2;echo "Phase 7 : Copying the iso to out folder";tput sgr0
 echo "################################################################## "
 echo
 [ -d  $outFolder ] || mkdir $outFolder
-cp $buildFolder/archiso/out/arcolinux* $outFolder
+cp $buildFolder/archiso/out/zencars* $outFolder
 
 echo
 echo "################################################################## "

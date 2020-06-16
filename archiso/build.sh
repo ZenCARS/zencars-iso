@@ -2,10 +2,10 @@
 
 set -e -u
 
-iso_name=arcolinux-next
-iso_label="arcolinux-next-v20.7.2"
-iso_publisher="ArcoLinux <http://www.arcolinux.info>"
-iso_application="ArcoLinux Live/Rescue CD"
+iso_name=zencars
+iso_label="zencars-v20.7.2"
+iso_publisher="ZenCARS"
+iso_application="ZenCARS Live/Rescue CD"
 iso_version="v20.7.2"
 install_dir=arch
 work_dir=work

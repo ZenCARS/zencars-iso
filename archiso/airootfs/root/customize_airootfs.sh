@@ -67,7 +67,7 @@ function createLiveUserFunc () {
 }
 
 function setDefaultsFunc() {
-    export _EDITOR=nano
+    export _EDITOR=nvim
     echo "EDITOR=${_EDITOR}" >> /etc/environment
     echo "EDITOR=${_EDITOR}" >> /etc/profile
 }
@@ -87,18 +87,18 @@ function enableServicesFunc() {
 	systemctl set-default graphical.target
 	systemctl enable NetworkManager.service
 	systemctl enable virtual-machine-check.service
-	systemctl enable update-mirrors.service
-  systemctl enable org.cups.cupsd.service
-  systemctl enable bluetooth.service
-  systemctl enable ntpd.service
-  #systemctl enable smb.service
-  #systemctl enable nmb.service
-  #systemctl enable winbind.service
-  systemctl enable avahi-daemon.service
-  systemctl enable avahi-daemon.socket
-  #systemctl enable tlp.service
-  #systemctl enable tlp-sleep.service
-  #systemctl enable vnstat.service
+	#systemctl enable update-mirrors.service
+    #systemctl enable org.cups.cupsd.service
+    #systemctl enable bluetooth.service
+    #systemctl enable ntpd.service
+    #systemctl enable smb.service
+    #systemctl enable nmb.service
+    #systemctl enable winbind.service
+    #systemctl enable avahi-daemon.service
+    #systemctl enable avahi-daemon.socket
+    #systemctl enable tlp.service
+    #systemctl enable tlp-sleep.service
+    #systemctl enable vnstat.service
 }
 
 function fixWifiFunc() {
